@@ -33,6 +33,28 @@
     gap: 2rem;
     margin-right: 1rem;
 }
+.linkItems li{
+    position: relative;
+      position: relative;
+  text-decoration: none;
+  color: inherit;
+  padding-bottom: 4px; 
+  transition: color 0.3s ease;
+}
+.linkItems li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.linkItems li:hover::after {
+  width: 100%;
+}
 .userInfo{
     display: flex;
     justify-content: center;
@@ -58,13 +80,15 @@
         display: block;
         z-index: 1001;
     }
+
+
     .navItems{
         flex-direction: column;
         position: absolute;
         min-width: 50%;
         top: 0;
         left: 0;
-        background-color: yellow;
+        background-color: inherit;
         height: 100vh;
         justify-content: space-around;
         position: fixed;
@@ -72,6 +96,15 @@
         transition: clip-path 0.7s ease-in-out;
         pointer-events: none
 
+    }
+        .blackColor{
+        background-color: white;
+        color: black;
+    }
+    .whiteColor{
+
+        background-color: black;
+        color: white;
     }
 
     .navItems.open{

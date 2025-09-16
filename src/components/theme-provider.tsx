@@ -1,7 +1,6 @@
 "use client";
 
 import { ThemeProvider as NextThemesProvider } from "next-themes";
-import Header from "./header/header";
 
 export function ThemeProvider({
   children,
