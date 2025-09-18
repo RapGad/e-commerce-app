@@ -1,37 +1,330 @@
-.heroContainer{
-    width: 100%;
+.heroContainer {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+/**Top Hero Container Design Start***/
+.topHeroContainer {
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  gap: 1rem;
+}
+
+
+/**Top Right Hero Container Design Start***/
+.topRightHeroContainer {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.boxDesignerTop {
+  position: absolute;
+  top: 80px;
+  right: 350px;
+  width: 500px;
+  height: 450px;
+  transform: rotate(30deg);
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: tomato;
+}
+
+.imgContainerTop {
+  position: absolute;
+  right: 200px;
+  width: 350px;
+  height: 500px;
+  margin-top: 1rem;
+}
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.textContainer span {
+  color: tomato;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+.btn {
+  width: 100%;
+  font-size: 1.23rem;
+}
+
+
+/**######Top Right Hero Container Design End***##########/
+
+
+/**Top Left Hero Container Design Start***/
+.topLeftHeroContainer {
+  position: relative;
+  width: 50%;
+}
+
+
+.textContainer {
+  padding: 0.85rem;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+.textContainer h1 {
+  font-size: 3.55rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+/**Top Left Hero Container Design End***/
+
+
+
+
+/*##########Top Hero Container Design End######*/
+
+
+
+/*#########Bottom Hero Container Design Start#########*/
+
+.bottomHeroContainer {
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  gap: 1rem;
+}
+
+/***********Bottom Left Hero Container Design Start**************/
+.bottomLeftHeroContainer {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+}
+.cardDesign {
+  position: absolute;
+  bottom: 0;
+  height: 120px;
+  width: 130px;
+  border: 2px dotted tomato;
+  transform: rotate(45deg);
+  margin: 1rem;
+}
+.cardDesign:nth-child(2) {
+  left: 120px;
+}
+.cardDesign:nth-child(3) {
+  left: 240px;
+}
+.cardDesign:nth-child(4) {
+  left: 360px;
+}
+.cardDesign:nth-child(5) {
+  left: 480px;
+}
+
+/***********Bottom Left Hero Container Design End**************/
+
+
+
+/***********Bottom Right Hero Container Design Start**************/
+.bottomRightHeroContainer {
+  position: relative;
+  width: 50%;
+}
+
+.boxDesignerBottom {
+  position: absolute;
+  top: 150px;
+  left: 300px;
+  width: 500px;
+  height: 450px;
+  transform: rotate(20deg);
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  background-color: tomato;
+}
+
+.imgContainerBottom {
+  position: absolute;
+  top: -50px;
+  left: 90px;
+  width: 350px;
+  height: 500px;
+  margin-top: 1rem;
+}
+/***********Bottom Right Hero Container Design End**************/
+
+
+
+
+/*#########Bottom Hero Container Design End#########*/
+
+@media (max-width: 1024px) {
+    /**######Top Hero Container Design Start#########*/
+
+  .topHeroContainer {
     height: 100vh;
+    flex-direction: column;
+  }
+
+    /**######Top Hero Container Design End#########*/
+
+  .topLeftHeroContainer {
+    position: static;
+    width: 100%;
+  }
+  .imgContainerTop {
+    position: absolute;
+    right: 300px;
+    width: 350px;
+    height: 500px;
+    margin-top: 1rem;
+  }
+  .boxDesignerTop {
+    position: absolute;
+    top: 10px;
+    right: 550px;
+    width: 500px;
+    height: 450px;
+    transform: rotate(30deg);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: tomato;
+  }
+  .topRightHeroContainer {
+    width: 100%;
+    position: absolute;
+    top: 500px;
+  }
+
+}
+@media (orientation: landscape){
+
+    .topLeftHeroContainer{
+        width: 50%;
+    }
+    .topRightHeroContainer{
+        width: 50%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    /**######Top Hero Container Design Start#########*/
+
+  .topHeroContainer {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+    /***Top Left Hero Container Design Start*****/
+
+    .topLeftHeroContainer {
+    width: 100%;
+    height: 50%;
     display: flex;
-    overflow: hidden;
     justify-content: center;
+  }
+    .boxDesignerTop {
+    display: none;
+  }
 
-}
-
-.imageContainer{
-    margin-top: 22rem;
+      .imgContainerTop {
+    position: static;
+    margin-top: 2.75rem;
+    max-width: 100%;
     display: flex;
-    width: 300px;
-    height: 300px;
-    transform-style: preserve-3d;
-    transform: perspective(1000px) rotateY(0deg);
-    position: relative;
-}
-
-.imageContainer span{
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: rotateY(calc(var(--i) *45deg )) translateZ(400px);
-    width: 100%;
+    justify-content: center;
+    align-items: center;
     height: 100%;
+  }
+    /***Top Left Hero Container Design End*****/
 
-}
+    /***Top Right Hero Container Design Start*****/
 
-.img{
-    position: absolute;
-    left: 0;
-    top: 0;
+
+    .topRightHeroContainer {
     width: 100%;
-    object-fit: cover;
+    height: 50%;
+  }
+    .textContainer h1{
+    font-size: 2rem;
+    
+  }
+
+    .buttonContainer{
+    width: 100%;
+  }
+  
+/***Top Right Hero Container Design End*****/
+
+    /**######Top Hero Container Design End#########*/
+
+
+
+/**######Bottom Hero Container Design Start#########*/
+  .bottomHeroContainer {
+    height: 100vh;
+    flex-direction: column;
+  }
+
+/**Bottom Left Hero Container Design Start***/
+  .bottomLeftHeroContainer {
+    width: 100%;
+    height: 50%;
+    border: 2px solid yellow;
+  }
+
+  .cardDesign{
+    width: 80px;
+    height: 120px;
+  }
+  .cardDesign:nth-child(2) {
+    left: 60px;
+  }
+  .cardDesign:nth-child(3) {
+    left: 120px;
+  }
+  .cardDesign:nth-child(4) {
+    left: 180px;
+  }
+  .cardDesign:nth-child(5) {
+    left: 240px;
+  }
+
+
+  /**Bottom Left Hero Container Design End***/
+
+ /**Bottom Right Hero Container Design Start***/
+  .bottomRightHeroContainer {
+    width: 100%;
+    height: 50%;
+  }
+  .boxDesignerBottom {
+    display: none;
+  }
+  .imgContainerBottom {
+    position: static;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+   /**Bottom Right Hero Container Design End***/
+
+
+  /**######Bottom Hero Container Design End#########*/
 
 }
+
+
