@@ -1,0 +1,10 @@
+.featuredContainer{
+    max-width: 1200px;
+    margin: 1rem auto;
+
+}
+.featuredContainer h1{
+    font-size: 3rem;
+    font-weight: bold;
+
+}

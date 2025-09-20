@@ -104,8 +104,7 @@
 /***********Bottom Left Hero Container Design Start**************/
 .bottomLeftHeroContainer {
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
+
   width: 50%;
 }
 .cardDesign {
@@ -113,9 +112,14 @@
   bottom: 0;
   height: 120px;
   width: 130px;
-  border: 2px dotted tomato;
+  border: 8px double tomato;
   transform: rotate(45deg);
   margin: 1rem;
+}
+.cardImage{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .cardDesign:nth-child(2) {
   left: 120px;
@@ -154,8 +158,8 @@
 
 .imgContainerBottom {
   position: absolute;
-  top: -50px;
-  left: 90px;
+  top: -120px;
+  left: 190px;
   width: 350px;
   height: 500px;
   margin-top: 1rem;
@@ -173,13 +177,14 @@
   .topHeroContainer {
     height: 100vh;
     flex-direction: column;
+
+
   }
-
-    /**######Top Hero Container Design End#########*/
-
-  .topLeftHeroContainer {
+  /***Top left Hero Container Design Start**/
+    .topLeftHeroContainer {
     position: static;
     width: 100%;
+    height: 50%;
   }
   .imgContainerTop {
     position: absolute;
@@ -199,14 +204,92 @@
     border-bottom-right-radius: 50px;
     background-color: tomato;
   }
-  .topRightHeroContainer {
+
+  /***Top left Hero Container Design End**/
+
+
+  /***Top Right Hero Container Design Start**/
+    .topRightHeroContainer {
+    margin-top: 12rem;
     width: 100%;
-    position: absolute;
-    top: 500px;
+    height: 50%;
+    align-items: center;
+
   }
 
-}
-@media (orientation: landscape){
+  /***Top Right Hero Container Design End**/
+
+    /**######Top Hero Container Design End#########*/
+
+
+    /**********/
+
+
+    /**######Bottom Hero Container Design Start#########*/
+
+    .bottomHeroContainer{
+      flex-direction: column;
+      
+      height: 100vh;
+    }
+
+      /***Bottom left Hero Container Design Start**/
+
+      .bottomLeftHeroContainer{
+        display: flex;
+        position: static;
+        width: 100%;
+        height: 50%;
+        justify-content: center;
+      }
+      .cardDesign{
+        position: static;
+        height: 200px;
+        
+      }
+
+
+
+      /***Bottom left Hero Container Design End**/
+
+
+
+      /***Bottom Right Hero Container Design Start**/
+
+      .bottomRightHeroContainer{
+        width: 100%;
+        height: 50%;
+      }
+
+      .boxDesignerBottom{
+        left: 530px;
+      }
+
+      .imgContainerBottom{
+        top: -190px;
+        left: 450px;
+      }
+
+      
+      /***Bottom Right Hero Container Design End**/
+
+
+
+
+
+
+
+
+
+
+    /**######Bottom Hero Container Design End#########*/
+
+  
+    }
+
+
+
+/* @media (orientation: landscape){
 
     .topLeftHeroContainer{
         width: 50%;
@@ -215,7 +298,7 @@
         width: 50%;
     }
 
-}
+} */
 
 @media (max-width: 768px) {
 
@@ -262,7 +345,7 @@
   }
 
     .buttonContainer{
-    width: 100%;
+    max-width: 100%;
   }
   
 /***Top Right Hero Container Design End*****/
@@ -281,12 +364,11 @@
   .bottomLeftHeroContainer {
     width: 100%;
     height: 50%;
-    border: 2px solid yellow;
   }
 
   .cardDesign{
-    width: 80px;
-    height: 120px;
+    width: 150px;
+    height: 300px;
   }
   .cardDesign:nth-child(2) {
     left: 60px;
@@ -308,6 +390,8 @@
   .bottomRightHeroContainer {
     width: 100%;
     height: 50%;
+    display: flex;
+    justify-content: center;
   }
   .boxDesignerBottom {
     display: none;

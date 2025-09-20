@@ -17,9 +17,8 @@ const Hero = () => {
 
         <div className={styles.topRightHeroContainer}>
             <div className={styles.textContainer}>
-                <h1>Join Our <span>Ongoing Auction</span> Now!!!</h1> 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
-                <p>Pay Less Win Big</p>
+                <h1>Shop and Win<span> The Future Of E-commerce</span> in Ghana</h1> 
+                <p>Buy directly from local stores or join exciting skill-based auction to win big</p>
 
             </div>
             <div className={styles.buttonContainer}>
@@ -30,11 +29,25 @@ const Hero = () => {
       </div>
       <div className={styles.bottomHeroContainer}>
         <div className={styles.bottomLeftHeroContainer}>
-          <div className={styles.cardDesign}></div>
-          <div className={styles.cardDesign}></div>
-          <div className={styles.cardDesign}></div>
-          <div className={styles.cardDesign}></div>
-          <div className={styles.cardDesign}></div>
+          <div className={styles.cardDesign}>
+            <Image width={500} height={500} src={'/img55.jpg'} alt="image"/>
+          </div>
+          <div className={styles.cardDesign}>
+                        <Image className={styles.cardImage} width={500} height={500} src={'/img54.jpg'} alt="image"/>
+
+          </div>
+          <div className={styles.cardDesign}>
+                        <Image width={500} height={500} src={'/img53.jpg'} alt="image"/>
+
+          </div>
+          <div className={styles.cardDesign}>
+                        <Image width={500} height={500} src={'/img52.jpg'} alt="image"/>
+
+          </div>
+          <div className={styles.cardDesign}>
+                        <Image width={500} height={500} src={'/img51.jpg'} alt="image"/>
+
+          </div>
             
         </div>
         <div className={styles.bottomRightHeroContainer}>
