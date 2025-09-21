@@ -10,6 +10,15 @@ import {
 } from "@/components/ui/carousel"
 import styles from './page.module.css'
 
+const image = [
+
+  {img1: '/img3.png'},
+  {img1: '/img40.png'},
+  {img1: '/img41.png'},
+  {img1: '/img42.png'},
+  {img1: '/img51.jpg'},
+]
+
 export function CarouselSpacing() {
   return (
     <div className="relative w-full">
@@ -21,7 +30,7 @@ export function CarouselSpacing() {
               <Card>
                 <CardHeader>Item 1</CardHeader>
                 <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <img src="/img3.png" alt="" />
+                  <img src={image[index].img1} alt="" />
                 </CardContent>
               </Card>
             </div>

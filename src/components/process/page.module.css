@@ -10,15 +10,14 @@
 }
 
 .steps{
-    width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     place-items: center;
-    padding: 2rem;
     gap: 1rem;
 }
 
 .cardContainer{
+    max-width: 100%;
     width: 380px;
 
 }
@@ -65,7 +64,14 @@
 
 @media (max-width: 768px) {
     .steps{
+        margin: 1rem auto;
         grid-template-columns: 1fr;
+    }
+    .main h1{
+        font-size: 2rem;
+    }
+    .cardContainer{
+        width: 100%;
     }
     
 }

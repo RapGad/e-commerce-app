@@ -1,0 +1,39 @@
+.trustContainer{
+    min-height: 50vh;
+    margin-top: 2rem;
+}
+
+.trustContainer h1{
+    font-size: 3rem;
+
+}
+
+.iconsContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    place-items: center;
+    gap: 1rem;
+}
+
+.cardContainer{
+    max-width: 100%;
+    width: 380px;
+
+}
+
+.cardTitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.cardContent{
+
+    position: relative;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+    align-items: center;
+}

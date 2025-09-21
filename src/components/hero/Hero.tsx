@@ -30,22 +30,22 @@ const Hero = () => {
       <div className={styles.bottomHeroContainer}>
         <div className={styles.bottomLeftHeroContainer}>
           <div className={styles.cardDesign}>
-            <Image width={500} height={500} src={'/img55.jpg'} alt="image"/>
+            <Image className={styles.cardImage}  width={500} height={500} src={'/img55.jpg'} alt="image"/>
           </div>
           <div className={styles.cardDesign}>
                         <Image className={styles.cardImage} width={500} height={500} src={'/img54.jpg'} alt="image"/>
 
           </div>
           <div className={styles.cardDesign}>
-                        <Image width={500} height={500} src={'/img53.jpg'} alt="image"/>
+                        <Image  className={styles.cardImage} width={500} height={500} src={'/img53.jpg'} alt="image"/>
 
           </div>
           <div className={styles.cardDesign}>
-                        <Image width={500} height={500} src={'/img52.jpg'} alt="image"/>
+                        <Image className={styles.cardImage}  width={500} height={500} src={'/img52.jpg'} alt="image"/>
 
           </div>
           <div className={styles.cardDesign}>
-                        <Image width={500} height={500} src={'/img51.jpg'} alt="image"/>
+                        <Image className={styles.cardImage}  width={500} height={500} src={'/img51.jpg'} alt="image"/>
 
           </div>
             

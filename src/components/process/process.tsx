@@ -21,7 +21,7 @@ const Process = () => {
                 <Button>Sign Up</Button>
                 </CardAction>
             </CardHeader>
-            <CardContent>
+            <CardContent className={styles.cardContent}>
               <img src="/img42.png" alt="" />
               You join our ongoing auction <br/>
               You wait for the game...That easy <ThumbsUp fill='#FFD700' color='#FFD700' style={{display: 'inline'}}/>

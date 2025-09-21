@@ -103,15 +103,15 @@
 
 /***********Bottom Left Hero Container Design Start**************/
 .bottomLeftHeroContainer {
-  position: relative;
-
   width: 50%;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(150px, 1fr));
+  place-items: end;
+
 }
 .cardDesign {
-  position: absolute;
-  bottom: 0;
-  height: 120px;
-  width: 130px;
+  width: 100%;
+  height: 150px;
   border: 8px double tomato;
   transform: rotate(45deg);
   margin: 1rem;
@@ -121,18 +121,7 @@
   height: 100%;
   object-fit: cover;
 }
-.cardDesign:nth-child(2) {
-  left: 120px;
-}
-.cardDesign:nth-child(3) {
-  left: 240px;
-}
-.cardDesign:nth-child(4) {
-  left: 360px;
-}
-.cardDesign:nth-child(5) {
-  left: 480px;
-}
+
 
 /***********Bottom Left Hero Container Design End**************/
 
@@ -229,22 +218,19 @@
 
     .bottomHeroContainer{
       flex-direction: column;
-      
       height: 100vh;
     }
 
       /***Bottom left Hero Container Design Start**/
 
       .bottomLeftHeroContainer{
-        display: flex;
-        position: static;
         width: 100%;
         height: 50%;
-        justify-content: center;
+        place-items: center;
+
       }
       .cardDesign{
-        position: static;
-        height: 200px;
+        height: 150px;
         
       }
 
@@ -356,7 +342,7 @@
 
 /**######Bottom Hero Container Design Start#########*/
   .bottomHeroContainer {
-    height: 100vh;
+    min-height: 100vh;
     flex-direction: column;
   }
 
@@ -364,12 +350,10 @@
   .bottomLeftHeroContainer {
     width: 100%;
     height: 50%;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 
-  .cardDesign{
-    width: 150px;
-    height: 300px;
-  }
+
   .cardDesign:nth-child(2) {
     left: 60px;
   }
