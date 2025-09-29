@@ -1,0 +1,12 @@
+.checkOutContainer{
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+
+.tabsContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    border: 2px solid red;
+}

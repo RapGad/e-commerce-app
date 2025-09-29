@@ -11,6 +11,11 @@
 
 @media (max-width: 768px){
     .carouselItem{
-        flex-basis: 100%;
+        flex-basis: calc(1/2* 100%);
+    }
+}
+@media (max-width: 480px){
+    .carouselItem{
+        flex-basis:  100%;
     }
 }

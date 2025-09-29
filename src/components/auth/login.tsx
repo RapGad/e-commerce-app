@@ -14,6 +14,8 @@ import { Input } from "../ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
+import { signIn } from "@/lib/auth-client";
+import { toast } from "sonner";
 
 const loginSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
@@ -26,6 +28,33 @@ const LoginForm = () => {
   const router = useRouter()
   const [loading, setLoading] = useState(false);
 
+
+  const onLogin = async(values: loginFormsValue)=>{
+    setLoading(true)
+
+    try {
+      const { error } = await signIn.email({
+        email: values.email,
+        password: values.password
+      })
+      
+      if(error){
+        toast('Unexpected error')
+        console.log(error)
+        return
+      }
+
+      toast('Login successful')
+
+      router.push('/')
+    }catch (e) {
+      console.log(e)
+      toast(`${e}`)
+      return
+    }finally{
+      setLoading(false)
+    }
+  }
   
 
   const form = useForm<loginFormsValue>({
@@ -37,7 +66,7 @@ const LoginForm = () => {
   });
   return (
     <Form {...form}>
-      <form className="space-y-4">
+      <form className="space-y-4" onSubmit={form.handleSubmit(onLogin)}>
         <FormField
           control={form.control}
           name="email"

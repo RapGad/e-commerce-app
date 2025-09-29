@@ -30,7 +30,7 @@ const TrustSection = () => {
         <Card className={styles.cardContainer}>
           <CardHeader>
             <CardTitle className={styles.cardTitle}>
-              <h2>Trust </h2>
+              <h2>Clients </h2>
               <BadgeCheck />
             </CardTitle>
           </CardHeader>
@@ -43,7 +43,7 @@ const TrustSection = () => {
         <Card className={styles.cardContainer}>
           <CardHeader>
             <CardTitle className={styles.cardTitle}>
-              <h2>Trust </h2>
+              <h2>Delivery </h2>
               <BadgeCheck />
             </CardTitle>
           </CardHeader>

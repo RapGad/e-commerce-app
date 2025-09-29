@@ -25,17 +25,19 @@ const Header = () => {
       <h1 className={styles.logo}>Logo</h1>
       <nav className={`${styles.navItems} ${showMenu ? styles.open: ''} ${theme === 'light' ? styles.whiteColor: styles.blackColor}`}>
         <ul className={styles.linkItems} >
-          <li>Home</li>
-          <li>Products</li>
-          <li>About</li>
-          <li>Contact</li>
+          <Link href={'/'}><li>Home</li></Link>
+          <Link href={'/about'}><li>About</li></Link>
+          <Link href={'/contact'}><li>Contact</li></Link>
+          <Link href={'/products'}><li>Products</li></Link>
+
         </ul>
 
         <div className={styles.userInfo}>
           <Link href={"/cart"}>
             <ShoppingCart strokeWidth={1.2} size={25} />
           </Link>
-          <Button className={styles.loginBtn}>Login</Button>
+          <Link href={'/auth'}><Button className={styles.loginBtn}>Login</Button></Link>
+          
           <ThemeToggle/>
         </div>
       </nav>
