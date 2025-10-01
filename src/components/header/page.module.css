@@ -68,6 +68,23 @@
     cursor: Pointer;
 }
 
+.cartContainer{
+    position: relative;
+    display: flex;
+}
+
+.cartNumber{
+    position: absolute;
+    left: 20px;
+    top: -10px;
+    background-color: tomato;
+    width: 20px;
+    height: 20px;
+    border-radius: 9999px;
+    text-align: center;
+    font-size: .8rem;
+}
+
 
 @media (max-width: 768px){
     .header{

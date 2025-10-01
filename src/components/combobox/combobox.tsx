@@ -28,30 +28,23 @@ type Status = {
   label: string
 }
 
-const statuses: Status[] = [
-  {
-    value: "backlog",
-    label: "Backlog",
-  },
-  {
-    value: "todo",
-    label: "Todo",
-  },
-  {
-    value: "in progress",
-    label: "In Progress",
-  },
-  {
-    value: "done",
-    label: "Done",
-  },
-  {
-    value: "canceled",
-    label: "Canceled",
-  },
-]
 
-export function ComboBoxResponsive() {
+export type Option = {
+  value: string
+  label: string
+}
+
+type ComboBoxResponsiveProps = {
+  options: Option[]
+  value: Option | null
+  onChange: (option: Option | null) => void
+  placeholder?: string
+}
+
+
+export function ComboBoxResponsive({
+  options, value, onChange, placeholder
+}: ComboBoxResponsiveProps) {
   const [open, setOpen] = React.useState(false)
   const isDesktop = useMediaQuery("(min-width: 768px)")
   const [selectedStatus, setSelectedStatus] = React.useState<Status | null>(
@@ -63,11 +56,11 @@ export function ComboBoxResponsive() {
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>
           <Button variant="outline" className="w-[150px] justify-start">
-            {selectedStatus ? <>{selectedStatus.label}</> : <>+ Set status</>}
+            {value ? <>{value.label}</> : <>{placeholder}</>}
           </Button>
         </PopoverTrigger>
         <PopoverContent className="w-[200px] p-0" align="start">
-          <StatusList setOpen={setOpen} setSelectedStatus={setSelectedStatus} />
+          <OptionList options={options} setOpen={setOpen} setSelectedStatus={onChange} />
         </PopoverContent>
       </Popover>
     )
@@ -82,17 +75,19 @@ export function ComboBoxResponsive() {
       </DrawerTrigger>
       <DrawerContent>
         <div className="mt-4 border-t">
-          <StatusList setOpen={setOpen} setSelectedStatus={setSelectedStatus} />
+          <OptionList options={options} setOpen={setOpen} setSelectedStatus={onChange} />
         </div>
       </DrawerContent>
     </Drawer>
   )
 }
 
-function StatusList({
+function OptionList({
+  options,
   setOpen,
   setSelectedStatus,
 }: {
+  options: Option[]
   setOpen: (open: boolean) => void
   setSelectedStatus: (status: Status | null) => void
 }) {
@@ -102,13 +97,13 @@ function StatusList({
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
         <CommandGroup>
-          {statuses.map((status) => (
+          {options.map((status) => (
             <CommandItem
               key={status.value}
               value={status.value}
               onSelect={(value) => {
                 setSelectedStatus(
-                  statuses.find((priority) => priority.value === value) || null
+                  options.find((priority) => priority.value === value) || null
                 )
                 setOpen(false)
               }}

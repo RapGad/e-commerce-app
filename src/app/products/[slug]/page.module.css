@@ -26,6 +26,28 @@
     padding: 1rem;
 }
 
+.description h1{
+    font-size: 2.95rem;
+    margin-bottom: .6rem;
+}
+
+.description h2{
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.description p{
+    font-size: 1.05rem;
+    
+}
+.price{
+    font-weight: bold;
+    font-size: 1.125rem;
+    color: tomato;
+    margin: 1rem  0;
+}
+
+
 @media screen and (max-width: 768px) {
     .main{
         flex-direction: column;

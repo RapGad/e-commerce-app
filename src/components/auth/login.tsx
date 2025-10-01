@@ -45,7 +45,6 @@ const LoginForm = () => {
       }
 
       toast('Login successful')
-
       router.push('/')
     }catch (e) {
       console.log(e)
